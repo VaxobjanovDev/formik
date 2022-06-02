@@ -14,6 +14,13 @@ function FormikContainer() {
       >
         {(formik) => (
           <Form>
+            <h1>Step 1:Your details</h1>
+            <FormControl
+              type="text"
+              name="name"
+              label="Name"
+              control="input"
+            />
             <FormControl
               type="email"
               name="email"
@@ -22,15 +29,29 @@ function FormikContainer() {
             />
             <FormControl
               type="text"
+              name="phone"
+              label="Phone"
+              control="input"
+            />
+            <h1>Step 2:Delivery address</h1>
+            <FormControl
+              type="text"
               name="comment"
               label="Comment"
               control="textarea"
+            />
+            <FormControl
+              type="text"
+              name="postCode"
+              label="Post Code"
+              control="input"
             />
             <FormControl
               name="selectOptions"
               control="select"
               label="Select Option"
             />
+            <h1>Step 3:Card details</h1>
             <FormControl
               name="radioOption"
               control="radio"

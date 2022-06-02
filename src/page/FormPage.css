@@ -1,0 +1,14 @@
+.form-page{
+    height: 100vh;
+    background-color:#998484;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.container{
+    margin-top: 10px;
+    min-width: 768px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0,0.5);
+}
