@@ -1,7 +1,6 @@
 import { ErrorMessage, Field } from "formik"
-import TextError from "./TextError"
-
-function    Input(props){
+import TextError from '../Errors/TextError'
+function Input(props){
     const {label,name, ...rest} = props
     return(
         <div className="form-control">

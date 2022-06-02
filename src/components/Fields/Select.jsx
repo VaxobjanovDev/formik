@@ -1,5 +1,13 @@
 import { ErrorMessage, Field } from "formik"
-import TextError from "./TextError"
+import TextError from '../Errors/TextError'
+
+
+export const dropDownOptions = [
+    { key: "Select any option", value: "" },
+    { key: "Option 1", value: "option" },
+    { key: "Option 2", value: "option1" },
+    { key: "Option 3", value: "option2" },
+  ];
 
 function Select(props) {
 
