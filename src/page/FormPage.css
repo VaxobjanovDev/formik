@@ -1,14 +1,113 @@
-.form-page{
-    height: 100vh;
-    background-color:#998484;
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
+.form-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
 }
 
-.container{
-    margin-top: 10px;
-    min-width: 768px;
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0,0.5);
+.container {
+  margin-top: 10px;
+  min-width: 768px;
+  border-radius: 5px;
+  background-color: #9CBC2C;
+  color: #000000;
+  height: 100%;
+}
+
+.personal-detail {
+  width: 400px;
+  margin: 1rem;
+}
+
+.form-control label {
+  margin: 0 1rem;
+}
+
+.form-control {
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #B9CF6A;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.textarea {
+  display: flex;
+  width: 100%;
+  margin: 1rem 0;
+  align-items: flex-start;
+}
+
+.textarea label {
+  margin: 0 1rem;
+}
+
+.textarea textarea {
+  height: 50px;
+  padding: 2px 5px;
+  width: 90%;
+  border: none;
+  border-radius: 4px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+input {
+  padding: 2px 5px;
+}
+
+option {
+  margin: 5px;
+  padding: 5px;
+}
+
+select {
+  cursor: pointer;
+  padding: 5px;
+  outline: none;
+}
+
+.form-control input {
+  border-radius: 4px;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+}
+
+.delivery-address {
+  width: 400px;
+  margin: 1rem 0;
+}
+
+.card-detail {
+  margin: 1rem 0;
+  width: 400px;
+}
+
+button {
+  padding: 1rem 2rem;
+  border: none;
+  background-color: crimson;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.text-error {
+  position: absolute;
+  left: 20%;
+  top: 35px;
+  z-index: 9;
+  color: rgb(255, 255, 255);
+  background-color: rgb(228, 88, 161);
+  padding: 5px;
+  border-radius: 5px;
 }

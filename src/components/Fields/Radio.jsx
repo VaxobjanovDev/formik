@@ -2,9 +2,9 @@ import { ErrorMessage, Field } from "formik";
 import TextError from "../Errors/TextError";
 
 const radioOptions = [
-  { key: "Color1", value: "green" },
-  { key: "Color2", value: "red" },
-  { key: "Color3", value: "blue" },
+  { key: "Visa", value: "visa" },
+  { key: "Mastercard", value: "masterCard" },
+  { key: "AmEx", value: "amex" },
 ];
 
 function Radio(props) {
@@ -16,7 +16,7 @@ function Radio(props) {
         {({ field }) => {
           return radioOptions.map((radio) => {
             return (
-              <div>
+              <div key={radio.key}>
                 <input
                   type="radio"
                   {...field}
@@ -24,7 +24,7 @@ function Radio(props) {
                   value={radio.key}
                   defaultChecked={field.value === radio.value}
                 />
-                <label htmlFor={radio.value}>{label}</label>
+                <label htmlFor={radio.value}>{radio.key}</label>
               </div>
             );
           });

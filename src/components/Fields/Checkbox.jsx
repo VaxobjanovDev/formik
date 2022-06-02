@@ -2,9 +2,9 @@ import { ErrorMessage, Field } from "formik";
 import TextError from "../Errors/TextError";
 
 const checkboxOptions = [
-  { key: "Color1", value: "green" },
-  { key: "Color2", value: "red" },
-  { key: "Color3", value: "blue" },
+  { key: "green", value: "green" },
+  { key: "red", value: "red" },
+  { key: "blue", value: "blue" },
 ];
 
 function Checkbox(props) {
@@ -16,7 +16,6 @@ function Checkbox(props) {
       <Field name={name} {...rest}>
         {({ field }) => {
           return checkboxOptions.map((option) => {
-
             return (
               <div key={option.key}>
                 <input
@@ -32,7 +31,7 @@ function Checkbox(props) {
           });
         }}
       </Field>
-      <ErrorMessage name={name} component={TextError} />
+      <ErrorMessage name={name} component={TextError} className="error" />
     </div>
   );
 }

@@ -1,10 +1,5 @@
-
-function TextError(props){
-    return(
-        <div className="text-error">
-            {props.children}
-        </div>
-    )
+function TextError(props) {
+  return <div className="text-error">{props.children}</div>;
 }
 
-export default TextError
+export default TextError;

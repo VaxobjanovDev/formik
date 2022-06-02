@@ -4,9 +4,9 @@ import TextError from '../Errors/TextError'
 
 const dropDownOptions = [
     { key: "Select any option", value: "" },
-    { key: "Option 1", value: "option" },
-    { key: "Option 2", value: "option1" },
-    { key: "Option 3", value: "option2" },
+    { key: "Uzbekistan", value: "uz" },
+    { key: "England", value: "en" },
+    { key: "Russia", value: "ru" },
   ];
 
 function Select(props) {
