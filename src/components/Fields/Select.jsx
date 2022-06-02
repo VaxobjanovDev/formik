@@ -2,7 +2,7 @@ import { ErrorMessage, Field } from "formik"
 import TextError from '../Errors/TextError'
 
 
-export const dropDownOptions = [
+const dropDownOptions = [
     { key: "Select any option", value: "" },
     { key: "Option 1", value: "option" },
     { key: "Option 2", value: "option1" },
@@ -17,7 +17,7 @@ function Select(props) {
         <div className="form-control">
             <label htmlFor={name}>{label}</label>
             <Field as='select' name={name} id={name} {...rest}>
-                {options.map((option) => (
+                {dropDownOptions.map((option) => (
                     <option key={option.value} value={option.value}>
                         {option.key}
                     </option>

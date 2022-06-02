@@ -1,23 +1,9 @@
-import * as Yup from "yup";
+import { useFormik } from "formik";
 import Checkbox from "../Fields/Checkbox";
 import Input from "../Fields/Input";
+import Radio from "../Fields/Radio";
 import Select from "../Fields/Select";
 import TextArea from "../Fields/TextArea";
-
-
-export const initialValues = {
-  email: "",
-  comment: "",
-  selectOptions: "",
-  checkboxOption:[]
-};
-
-export const validationSchema = Yup.object().shape({
-  email: Yup.string().email("Invalid email format").required("Required"),
-  comment: Yup.string().required("Required"),
-  selectOptions: Yup.string().required("Required"),
-  checkboxOption:Yup.array().required("Required")
-});
 
 export const onSubmit = (values) => {
   console.log(values);
@@ -32,10 +18,10 @@ function FormControl(props) {
       return <TextArea {...rest} />;
     case "select":
       return <Select {...rest} />;
-    // case "radio":
-    //   return <Radio />;
+    case "radio":
+      return <Radio {...rest} />;
     case "checkbox":
-      return <Checkbox />;
+      return <Checkbox {...rest}/>;
     // case "date":
     //   return <Date />;
     default:

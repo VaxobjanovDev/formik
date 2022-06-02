@@ -1,11 +1,10 @@
 import React from "react";
 import { Form, Formik } from "formik";
-import { dropDownOptions } from "../Fields/Select";
-import FormControl, { initialValues, onSubmit, validationSchema } from "./FormControl";
-import { checkboxOptions } from "../Fields/Checkbox";
+import FormControl, { onSubmit } from "./FormControl";
+import { initialValues, validationSchema } from "./YupValidationSchema";
+
 
 function FormikContainer() {
-
   return (
     <div className="formik">
       <Formik
@@ -31,13 +30,16 @@ function FormikContainer() {
               name="selectOptions"
               control="select"
               label="Select Option"
-              options={dropDownOptions}
+            />
+            <FormControl
+              name="radioOption"
+              control="radio"
+              label="Choose"
             />
              <FormControl
               name="checkboxOption"
               control="checkbox"
               label="Choose product color"
-              options={checkboxOptions}
             />
             <button type="submit">Submit</button>
           </Form>

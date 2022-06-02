@@ -1,32 +1,30 @@
 import { ErrorMessage, Field } from "formik";
 import TextError from "../Errors/TextError";
 
-const checkboxOptions = [
+const radioOptions = [
   { key: "Color1", value: "green" },
   { key: "Color2", value: "red" },
   { key: "Color3", value: "blue" },
 ];
 
-function Checkbox(props) {
+function Radio(props) {
   const { name, label, rest } = props;
-
   return (
     <div className="form-control">
       <label htmlFor={name}>{label}</label>
       <Field name={name} {...rest}>
         {({ field }) => {
-          return checkboxOptions.map((option) => {
-
+          return radioOptions.map((radio) => {
             return (
-              <div key={option.key}>
+              <div>
                 <input
-                  type="checkbox"
-                  id={option.key}
-                  value={option.key}
-                  defaultChecked={!field.value.includes(option.value)}
+                  type="radio"
                   {...field}
+                  id={radio.value}
+                  value={radio.key}
+                  defaultChecked={field.value === radio.value}
                 />
-                <label htmlFor={option.key}>{option.key}</label>
+                <label htmlFor={radio.value}>{label}</label>
               </div>
             );
           });
@@ -37,4 +35,4 @@ function Checkbox(props) {
   );
 }
 
-export default Checkbox;
+export default Radio;
